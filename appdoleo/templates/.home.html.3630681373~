@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Leonardo Antunes Orenstein</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1 class="cor-titulo">Leonardo Antunes Orenstein</h1>
+  <h2>Introdução ao Tênis: Uma História de Paixão e Habilidade</h2>
+  <p>O <u> tênis </u> é um esporte fascinante que combina <b> habilidade, estratégia e resistência física. </b> Originado na França no século XII como uma versão primitiva do jogo, o tênis moderno evoluiu ao longo dos séculos para se tornar um dos esportes mais populares e emocionantes do mundo.
+
+No século XIX, o tênis ganhou destaque na Inglaterra, onde regras mais padronizadas foram estabelecidas, e o esporte se espalhou rapidamente para outras partes do mundo. A introdução de raquetes de tênis e bolas de borracha vulcanizada trouxe uma dinâmica totalmente nova ao jogo, permitindo mais controle e potência nos golpes.
+
+Hoje, o tênis é um esporte internacionalmente aclamado, com torneios de prestígio, como <i> Wimbledon </i>, o Aberto dos Estados Unidos, o Aberto da Austrália e <i> Roland Garros </i>, que atraem fãs de todo o mundo. Mas o verdadeiro destaque desse esporte são seus talentosos atletas que elevaram o jogo a novos patamares de excelência.</p>
+  <h2>Os 5 Maiores vencedores de Grand Slams</h2>
+
+  <div class="blue-center">
+  <span class="font-size-jogadores">
+  
+
+  <ol>
+    {% for tenistas in tenistas %}
+      <li>{{ tenistas.nome }}
+      <a href="/tenistas/update/{{ tenistas.id }}">Atualizar</a>
+      <a href="/tenistas/delete/{{ tenistas.id }}">Remover</a>
+      </li>
+    {% endfor %}
+  </ol>
+
+  <a href="/tenistas">Adicionar novo tenista</a>
+    
+  </div>
+  </span>
+
+  <img src="https://conteudo.imguol.com.br/c/esporte/ca/2023/07/14/novak-djokovic-nas-semifinal-de-wimbledon-de-2023-contra-jannik-sinner-1689341739810_v2_3x4.jpg
+" width="250">
+
+  <img src="https://s2-ge.glbimg.com/jWWLTG0HtiaQ0niDI_YR7PBy4Y4=/0x0:1917x2430/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_bc8228b6673f488aa253bbcb03c80ec5/internal_photos/bs/2022/1/P/pa0EWrSKWLZqPpRbla8Q/foaks-0vcam-mab.jpg" width="250">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Federer_WM16_%2837%29_%2828136155830%29.jpg" width="250">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Pete_Sampras_%282008%29_1%2C_cropped.jpg/800px-Pete_Sampras_%282008%29_1%2C_cropped.jpg" width="250">
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Roy_Emerson_1969_%28cropped%29.jpg/800px-Roy_Emerson_1969_%28cropped%29.jpg" width="250">
+
+    </div>
+  
+  <h2>Agora, vamos mergulhar no mundo emocionante dos melhores tenistas do planeta. Esses atletas excepcionais não apenas dominam o esporte, mas também inspiram gerações com seu talento, dedicação e determinação.</h2>
+
+  
+  <span class="font-size-jogadores">
+  
+
+  </span>
+  <div class="blue-center">
+    <h2>Tabela de participação em Grand Slams por vitórias</h2>
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Participações</th>
+            <th>Vitórias</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for tabela in tabela %}
+        <tr>
+            <td>{{ tabela.nome }}</td>
+            <td>------ {{ tabela.participa }} ------</td>
+            <td>--- {{ tabela.vitorias }} ---</td>
+          <a href="/tabela/update/{{ tabela.id }}">Atualizar</a>
+          <a href="/tabela/delete/{{ tabela.id }}">Remover</a>
+        </tr>
+        {% endfor %}
+      <a href="/tabela">Adicionar novo tenista</a>
+    </tbody>
+</table>
+    </div>
+
+  <style> 
+     h2{
+       font-family: arial;
+      }
+</style>
+
+  <h2>Principais vencedores de cada Grand Slam</h2>
+
+<div class="font-size-li">
+  <ul>
+    {% for torneios in torneios %}
+      <li>{{ torneios.nomeTorneio }} - {{ torneios.nomeJogador }} - {{ torneios.vitorias }} vitórias
+      <a href="/torneios/update/{{ torneios.id }}">Atualizar</a>
+      <a href="/torneios/delete/{{ torneios.id }}">Remover</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <a href="/torneios">Adicionar novo torneio - jogador - vitórias</a>
+  
+</div>
+  <h2>Roger Federer 10 belas jogadas de genio</h2>
+ 
+
+  <a class="font-size-a" href="https://youtu.be/jv12UA4EHmw" target="_blank" style="color: red">Assista clicando aqui<a/>
+
+
+    
+  
+</body>
+
+</html>
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'style.css' %}">

@@ -1,0 +1,26 @@
+<h1>{{ action }} Torneio - Atleta - Vitórias</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Título :</label>
+    <input name= "title", value= "{{torneio.title}}">
+  </div>
+
+  <div>
+    <label>Torneio:</label>
+    <input name= "nomeTorneio", value= "{{torneio.nomeTorneio}}">
+  </div>
+
+  <div>
+    <label>Atleta:</label>
+    <input name= "nomeJogador", value= "{{torneio.nomeJogador}}">
+  </div>
+
+  <div>
+    <label>Vitória:</label>
+    <input type= "number", name= "vitorias", value= "{{torneio.vitorias}}">
+  </div>
+
+  <input type="submit" value="Registrar">
+</form>

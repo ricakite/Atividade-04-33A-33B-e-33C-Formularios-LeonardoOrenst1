@@ -1,0 +1,22 @@
+<h1>{{ action }} na tabela</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Nome:</label>
+    <input name= "nome" value= "{{tabela.nome}}">
+  </div>
+
+  <div>
+    <label>Participa:</label>
+    <input type= "number", name= "participa" value= "{{tabela.participa}}">
+  </div>
+
+  <div>
+    <label>Vitórias:</label>
+    <input type= "number", name= "vitorias" value= "{{tabela.vitorias}}">
+  </div>
+
+
+  <input type="submit" value="Registrar">
+</form>

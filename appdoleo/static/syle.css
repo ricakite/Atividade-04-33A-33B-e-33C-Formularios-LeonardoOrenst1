@@ -1,0 +1,26 @@
+.blue-center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.font-size-li{
+  font-size: 18px;
+}
+
+.font-size-a{
+  font-size: 22px;
+}
+
+.font-size-jogadores{
+  font-size: 20px;
+}
+
+.cor-titulo{
+  color: red
+}
+
+.table{
+  font-family: arial;
+}
